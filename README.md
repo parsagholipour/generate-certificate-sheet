@@ -10,6 +10,7 @@ openssl x509 -req -in newcert.pem -signkey newcert.key -out newcert.crt
 
 
 
+```
 [ req ]
 default_bits           = 2048
 distinguished_name     = req_distinguished_name
@@ -29,3 +30,4 @@ subjectAltName = @alt_names
 [alt_names]
 DNS.1   = localhost
 DNS.2   = localhost:3004
+```
