@@ -31,3 +31,11 @@ subjectAltName = @alt_names
 DNS.1   = localhost
 DNS.2   = localhost:3004
 ```
+
+
+OR
+```
+openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes `
+  -keyout newcert.key -out newcert.crt -subj '/CN=localhost' `
+  -addext 'subjectAltName=DNS:localhost'
+```
